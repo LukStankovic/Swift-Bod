@@ -24,6 +24,9 @@ class Bod {
     func vzdalenostOdNuly() ->Float{
         return sqrt(pow(0-x, 2) + pow(0-y,2))
     }
+    func vzdalenostOdBodu(b: Bod) ->Float{
+        return sqrt(pow(b.x-self.x, 2) + pow(b.y-self.y,2))
+    }
 }
 
 
@@ -32,9 +35,10 @@ var b = Bod(x: 3, y: 6)
 
 print("Bod A:[\(a.x),\(a.y)]")
 
+print("Vzdálenost od nuly: \(a.vzdalenostOdNuly())")
+
+print("Vzdálenost od nuly: \(a.vzdalenostOdBodu(b))")
+
 a.posun(10, py: 10)
 
 print("Posun A o 10: [\(a.x), \(a.y)]")
-
-
-print("Vzdálenost od nuly: \(a.vzdalenostOdNuly())")
