@@ -17,9 +17,18 @@ class Bod {
         self.x = x
         self.y = y
     }
+    func posun(px: Int, py: Int){
+        x+=px
+        y+=py
+    }
 }
+
 
 var a = Bod(x: 1, y: 4)
 var b = Bod(x: 3, y: 6)
 
+print("Bod A:[\(a.x),\(a.y)]")
 
+a.posun(10, py: 10)
+
+print("Posun A o 10: [\(a.x), \(a.y)]")
