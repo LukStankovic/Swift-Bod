@@ -9,17 +9,20 @@
 import Foundation
 
 class Bod {
-    var x: Int = 0
-    var y: Int = 0
+    var x: Float = 0
+    var y: Float = 0
     var popis: String = "Třída pro práci s body"
     
-    init(x: Int, y: Int) {
+    init(x: Float, y: Float) {
         self.x = x
         self.y = y
     }
-    func posun(px: Int, py: Int){
+    func posun(px: Float, py: Float){
         x+=px
         y+=py
+    }
+    func vzdalenostOdNuly() ->Float{
+        return sqrt(pow(0-x, 2) + pow(0-y,2))
     }
 }
 
@@ -32,3 +35,6 @@ print("Bod A:[\(a.x),\(a.y)]")
 a.posun(10, py: 10)
 
 print("Posun A o 10: [\(a.x), \(a.y)]")
+
+
+print("Vzdálenost od nuly: \(a.vzdalenostOdNuly())")
